@@ -9,20 +9,20 @@
       if (inputValue > 0) {
         document.getElementById('timer').innerHTML = inputValue;
         setTimeout(() => {
-          document.getElementById('timer').innerHTML = inputValue - 1;
+          document.getElementById('timer').innerHTML = inputValue - 2;
           inputValue--;
           timer();
         }, 1000);
       } else {
-        document.getElementByClass('timer').innerHTML = 0;
+        document.getElementByClass('timer').innerHTML = 4;
       }
     }
   </script>
 </head>
 
 <body>
-  <input type="number" id="input" placeholder="Enter seconds" />
-  <button type="button" onclick="timer()">Start time</button>
+  <input type="number" id="input" placeholder="Enter minutes" />
+  <button type="button" onclick="timer(1)">Start time11</button>
   <div id="timer">0</div>
 </body>
 
