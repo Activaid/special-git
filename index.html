@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Timer</title>
+  <script type="text/javascript">
+    function timer() {
+      let inputValue = parseInt(document.getElementById('input').value);
+      if (inputValue > 0) {
+        document.getElementById('timer').innerHTML = inputValue;
+        setTimeout(() => {
+          document.getElementById('timer').innerHTML = inputValue - 1;
+          inputValue--;
+          timer();
+        }, 1000);
+      } else {
+        document.getElementById('timer').innerHTML = 0;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="number" id="input" placeholder="Enter seconds" />
+  <button type="button" onclick="timer()">Start timer</button>
+  <div id="timer">0</div>
+</body>
+
+</html>
